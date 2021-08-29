@@ -12,7 +12,6 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.PRIVATE_SSH }}
-          password: ${{ secrets.FEP_PASS }}
           script: |
             cd www
             git pull
