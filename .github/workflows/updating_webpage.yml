@@ -16,5 +16,5 @@ jobs:
           password: ${{ secrets.FEP_PAS }}
           script: |
             cd www
-            git fetch
+            git pull
 
