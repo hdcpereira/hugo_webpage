@@ -13,7 +13,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          password: ${{ secrets.FEP_PAS }}
+          password: ${{ secrets.FEP_PASS }}
           script: |
             cd www
             git pull
