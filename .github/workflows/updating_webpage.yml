@@ -1,11 +1,9 @@
 name: CI App to DO
-
-on:
-  push:
-    branches: [master]
-
+on: [push]
 jobs:
-  deploy-do:
+
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: SSH to server and Deploy webpage
@@ -14,7 +12,5 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           password: ${{ secrets.FEP_PAS }}
-          script: |
-            cd www
-            git pull
+          script: whoami
 
