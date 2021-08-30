@@ -12,5 +12,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
           key: ${{ secrets.PRIVATE_SSH }}
-          script: whoami
+          script: | 
+            cd www
+            git pull
 
